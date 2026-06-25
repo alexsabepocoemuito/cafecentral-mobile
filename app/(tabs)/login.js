@@ -6,7 +6,7 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 
 // INDICA PARA QUAL BACKEND A API VAI ENVIAR OS DADOS
-const API_URL = 'https://cafe-central-ofc.onrender.com'
+const API_URL = "https://cafecentral-mobile.onrender.com";
 
 export default function Login() {
   const [email, setEmail] = useState('');
