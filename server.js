@@ -13,8 +13,7 @@ const listOrigins = [
   "http://localhost:8081",
   "http://localhost:5501",
   "http://127.0.0.1:5501",
-  "https://firedw.github.io",
-  "https://FireDW.github.io",
+  "https://alexsabepocoemuito.github.io/cafecentral-mobile",
   "https://cafecentral-mobile.onrender.com"
 ];
 
