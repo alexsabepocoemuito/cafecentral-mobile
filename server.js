@@ -188,11 +188,11 @@ app.post("/login", async (req, res) => {
 // CONTATO
 app.post("/contato", async (req, res) => {
   try {
-    const { nome_mensagem, email_mensagem, mensagem_mensagem } = req.body;
+    const { nome, email, mensagem } = req.body;
 
     console.log("Dados recebidos no contato:", req.body);
 
-    if (!nome_mensagem || !email_mensagem || !mensagem_mensagem) {
+    if (!nome || !email || !mensagem) {
       return res.status(400).json({
         erro: "Preencha todos os campos!"
       });
@@ -200,9 +200,9 @@ app.post("/contato", async (req, res) => {
 
     await pool.execute(
       `INSERT INTO tb_mensagem 
-      (nome_mensagem, email_mensagem, mensagem_mensagem)
+      (nome, email, mensagem)
       VALUES (?, ?, ?)`,
-      [nome_mensagem, email_mensagem, mensagem_mensagem]
+      [nome, email, mensagem]
     );
 
     return res.json({
